@@ -25,7 +25,7 @@ class Emojione
      *
      * @throws \BadMethodCallException If the method doesn't exists in client
      */
-    public static function __callStatic($method, $args)
+    public static function callStatic($method, $args)
     {
         $client = static::getClient();
 
@@ -48,7 +48,7 @@ class Emojione
      */
     public static function getClient()
     {
-        if ( static::$client === null )
+        if ( static::$client == null )
         {
             static::setClient(new Client);
         }
@@ -61,7 +61,7 @@ class Emojione
      *
      * @param  ClientInterface $client The Client
      * @return void
-     */
+     **/
     public static function setClient(ClientInterface $client)
     {
         // DEPRECATED
@@ -77,7 +77,7 @@ class Emojione
      *
      * @param  ClientInterface $client The Client
      * @return self
-     */
+     **/
     protected static function loadConfig(ClientInterface $client)
     {
         static::$ascii               = $client->ascii;
