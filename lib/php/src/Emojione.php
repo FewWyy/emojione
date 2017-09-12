@@ -41,7 +41,7 @@ class Emojione
 
     }
 
-    /**
+    /*
      * Get the Client
      *
      * @return ClientInterface The Client
@@ -56,7 +56,7 @@ class Emojione
         return static::$client;
     }
 
-    /**
+    /*
      * Set the Client
      *
      * @param  ClientInterface $client The Client
@@ -70,7 +70,7 @@ class Emojione
         static::$client = $client;
     }
 
-    /**
+    /*
      * Load config from Client
      *
      * @deprecated
@@ -95,7 +95,7 @@ class Emojione
         static::$shortcodeRegexp     = $client->shortcodeRegexp;
     }
 
-    /**
+    /*
      * Update config in Client
      *
      * @deprecated
@@ -110,7 +110,7 @@ class Emojione
         $client->unicodeAlt          = static::$unicodeAlt;
         $client->emojiVersion	     = static::$emojiVersion;
 		$client->emojiSize			 = static::$emojiSize;
-		$client->greedyMatch			 = static::$greedyMatch;
+		$client->greedyMatch		 = static::$greedyMatch;
         $client->sprites             = static::$sprites;
 		$client->spriteSize          = static::$spriteSize;
         $client->imagePathPNG        = static::$imagePathPNG;
